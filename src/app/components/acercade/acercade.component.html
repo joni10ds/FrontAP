@@ -13,3 +13,17 @@
     <button class="edit_text"></button>
 
 </div>
+
+<ul>
+    <h3><li *ngFor="let persona of personas">{{persona.nombre +" "+ persona.apellido}}</h3>
+    <h4><li *ngFor="let persona of personas">{{persona.titulo1}}</h4>
+    <img src="../../../assets/images/logoArgentinaPrograma.jpg" height="30" width="40"><br><br>    
+    <h4><li *ngFor="let persona of personas">{{persona.titulo2}}</h4>
+    <img src="../../../assets/images/logoUBA.png" height="30" width="40"> 
+    <img class="edit1" src="../../../assets/images/edit.png" height="60" width="80">    
+    <h3>Email</h3>
+    <li *ngFor="let persona of personas">{{persona.email}}
+    <h3>Acerca de</h3>
+    <li *ngFor="let persona of personas">{{persona.acercade}}               
+    </li>
+</ul>

@@ -12,6 +12,10 @@ import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+// externals
+import {HttpClientModule} from '@angular/common/http';
+//import {formsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +30,10 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

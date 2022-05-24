@@ -1,3 +1,17 @@
 <h3>Experiencia</h3><br>
 <h5>CREDITAM LIMITADA S.A.</h5>                    
 <p>Responsable de la administración, etc.... </p>
+
+<ul>
+    <h3>Empresa</h3>
+    <h3><li *ngFor="let experiencia of experiencias">{{experiencia.empresa}}</h3>
+    <h3>Cargo/Puesto</h3>
+    <h4><li *ngFor="let experiencia of experiencias">{{experiencia.puesto}}</h4>
+    <h3>Fecha de ingreso</h3>
+    <h5><li *ngFor="let experiencia of experiencias">{{experiencia.fechaingreso}}</h5>
+    <h3>Fecha de salida</h3>
+    <h5><li *ngFor="let experiencia of experiencias">{{experiencia.fechasalida}}</h5>
+    <h3>Descripción</h3>
+    <h5><li *ngFor="let experiencia of experiencias">{{experiencia.detalle}}               
+    </li></h5>
+</ul>
