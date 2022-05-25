@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { AcercadeComponent } from './components/acercade/acercade.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { SkillComponent } from './components/skill/skill.component';
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -23,12 +23,13 @@ import {HttpClientModule} from '@angular/common/http';
     AcercadeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
+    SkillComponent,
     IdiomasComponent,
     ProyectosComponent,
     FooterComponent,
-  ],
-  imports: [
+    ],
+  
+    imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

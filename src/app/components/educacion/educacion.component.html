@@ -1,17 +1,4 @@
 <h3>Educación</h3><br>
-<h5>EDITAR</h5>                    
-<p>EDITAR, etc.... </p>
 
-<ul>
-    <h3>Educacion</h3>
-    <h3><li *ngFor="let educacion of educaciones">{{educacion.tipo}}</h3>
-    <h3>Carrera</h3>
-    <h4><li *ngFor="let educacion of educaciones">{{educacion.carrera}}</h4>
-    <h3>Establecimiento</h3>
-    <h5><li *ngFor="let educacion of educaciones">{{educacion.establecimiento}}</h5>
-    <h3>Fecha de inicio</h3>
-    <h5><li *ngFor="let educacion of educaciones">{{educacion.fechainicio}}</h5>
-    <h3>Fecha de finalización</h3>
-    <h5><li *ngFor="let educacion of educaciones">{{educacion.fechafin}}            
-    </li></h5>
-</ul>
+<h3><li *ngFor="let educacion of educaciones">Carrera :&nbsp;{{educacion.carrera}}<br>Tipo :&nbsp;{{educacion.tipo}}&nbsp;<br>Establecimiento :&nbsp;{{educacion.establecimiento}}<br>Fecha de Inicio :&nbsp;{{educacion.fechainicio}}<br>Fecha de Finalización :&nbsp;{{educacion.fechafin}}<br><br></h3>
+    <br><br>

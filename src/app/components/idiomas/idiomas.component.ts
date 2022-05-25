@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IdiomaService } from 'src/app/service/idioma.service';
 
 @Component({
   selector: 'app-idiomas',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./idiomas.component.css']
 })
 export class IdiomasComponent implements OnInit {
+  idiomas: any = {};
 
-  constructor() { }
+  constructor(private idiomaservice : IdiomaService) { }
 
   ngOnInit(): void {
+    this.idiomaservice.getAllIdiomas().subscribe( (idiomas: any) => {
+      this.idiomas = idiomas;
+    })
   }
 
 }
