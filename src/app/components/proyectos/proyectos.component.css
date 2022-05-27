@@ -1,0 +1,12 @@
+.proyectoAP {
+    height: 420px;
+    width: 650px;
+    margin-left: 75px;
+    margin-top: 20px;
+}
+
+.lista {
+    border-bottom: 4px solid #19D3EC;
+    margin-bottom: 35px;
+    width: 100%;
+ }
