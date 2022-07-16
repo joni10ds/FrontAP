@@ -11,7 +11,7 @@ export class SkillService {
   constructor(private http: HttpClient) { 
     this.urlsApi = {
       //cuando levantamos la base online cambiar la url http://localhost:8080/ por la url de la base
-      getskillEndpoint: 'http://localhost:8080/ver/skills',
+      getskillEndpoint: 'https://argprog2022.herokuapp.com/ver/skills',
       
     }
   

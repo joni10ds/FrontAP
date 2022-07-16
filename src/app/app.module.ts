@@ -15,6 +15,9 @@ import { LoginComponent } from './components/login/login.component';
 
 // externals
 import {HttpClientModule} from '@angular/common/http';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //import {formsModule} from '@angular/forms';
 
@@ -30,12 +33,15 @@ import {HttpClientModule} from '@angular/common/http';
     ProyectosComponent,
     FooterComponent,
     LoginComponent,
+    PortfolioComponent,
+    IniciarSesionComponent,
     ],
   
     imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   
   providers: [],

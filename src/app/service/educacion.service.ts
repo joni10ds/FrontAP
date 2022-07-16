@@ -11,7 +11,7 @@ export class EducacionService {
   constructor(private http: HttpClient) { 
     this.urlsApi = {
       //cuando levantamos la base online cambiar la url http://localhost:8080/ por la url de la base
-      geteducacionEndpoint: 'http://localhost:8080/ver/educaciones',
+      geteducacionEndpoint: 'https://argprog2022.herokuapp.com/ver/educaciones',
       
     }
 
