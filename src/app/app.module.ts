@@ -11,7 +11,6 @@ import { SkillComponent } from './components/skill/skill.component';
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
 
 // externals
 import {HttpClientModule} from '@angular/common/http';
@@ -32,7 +31,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     IdiomasComponent,
     ProyectosComponent,
     FooterComponent,
-    LoginComponent,
     PortfolioComponent,
     IniciarSesionComponent,
     ],
