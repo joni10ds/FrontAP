@@ -21,11 +21,11 @@ export class ExperienciaComponent implements OnInit {
 
 }
 NewExperiencia(){
-  alert('sos cagon');
+  alert('SOS');
 }
 
 DeleteExperiencia(){
-  alert('sos cagon');
+  alert('SOS');
 }
 //deleteExperiencia(id: any){
 //  this.experienciaservice.deleteExperiencia(id).subscribe()
