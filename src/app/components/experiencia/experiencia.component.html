@@ -1,10 +1,28 @@
-<h3>Experiencia</h3><br>
+<h3>Experiencia</h3> <button class="btn btn-primary" type="button" (click)="NewExperiencia()" id="experienciaButton">Nueva Experiencia</button><br><br> <br>
 
 <div class="lista">
-<h3><li *ngFor="let experiencia of experiencias">Empresa :&nbsp;{{experiencia.empresa}}<br>Cargo/Puesto :&nbsp;{{experiencia.puesto}}<br>
+<h3><li *ngFor="let experiencia of experiencias"><a href="#" (click)="NewExperiencia()"><img src="../../../assets/images/edit2.png" height="30" width="40"></a>
+    <a href="#" (click)="DeleteExperiencia()"><img src="../../../assets/images/edit.png" height="30" width="40"></a>
+    <br>    
+Empresa :&nbsp;{{experiencia.empresa}}<br>Cargo/Puesto :&nbsp;{{experiencia.puesto}}<br>
 Fecha de Ingreso :&nbsp;{{experiencia.fechaingreso}}&nbsp; <br>
 Fecha de Salida :&nbsp;{{experiencia.fechasalida}}&nbsp; <br>
 Detalle :&nbsp;{{experiencia.detalle}}</li></h3>
 <br><br>
-</div>
-    
+
+<h1 class="m-5">Ingresar Datos</h1>
+<form>
+    <label><legend>Empresa: <input/></legend></label>
+    <fieldset><legend>Puesto: <input/></legend></fieldset>
+    <fieldset><legend>Fecha de ingreso: <input/></legend></fieldset>
+    <fieldset><legend>Fecha de salida: <input/></legend></fieldset>
+    <fieldset><legend>Detalle: <input/></legend></fieldset>
+    <br> 
+    <button class="btn btn-primary" type="button" id="enviarButton">Enviar</button>
+    <button class="btn btn-primary" type="button" id="cancelarButton">Cancelar</button>
+    <br><br>
+</form>
+
+
+
+

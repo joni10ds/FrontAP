@@ -7,8 +7,8 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencias: any = {};
-
+  experiencias: any = [];
+  
   
   constructor(private experienciaservice : ExperienciaService) { }
 
@@ -16,6 +16,19 @@ export class ExperienciaComponent implements OnInit {
     this.experienciaservice.getAllExperiencias().subscribe( (experiencias: any) => {
       this.experiencias = experiencias;
   })
+
+
+
 }
+NewExperiencia(){
+  alert('sos cagon');
+}
+
+DeleteExperiencia(){
+  alert('sos cagon');
+}
+//deleteExperiencia(id: any){
+//  this.experienciaservice.deleteExperiencia(id).subscribe()
+//}
 
 }
