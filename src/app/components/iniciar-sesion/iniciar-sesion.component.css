@@ -1,0 +1,11 @@
+#login {
+    background-image: url("/../../assets/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: 331px 0;
+    background-size: contain;
+}
+
+#login form {
+   left:30%;
+   width: 25%;
+}

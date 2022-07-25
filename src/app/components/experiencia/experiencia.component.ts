@@ -17,15 +17,34 @@ export class ExperienciaComponent implements OnInit {
       this.experiencias = experiencias;
   })
 
+  //onClick(){
+
+  //}
+
 
 
 }
 NewExperiencia(){
-  alert('SOS');
+  const app = document.getElementById("modal-formulario");
+  app.style.display = "block"; 
+}
+
+EditExperiencia(){
+  const app = document.getElementById("modal-formulario");
+  app.style.display = "block"; 
+}
+
+cerrarModal(){
+  
+    const app = document.getElementById("modal-formulario");
+  app.style.display = "none"; 
+     
+  
+  
 }
 
 DeleteExperiencia(){
-  alert('SOS');
+  alert('¡Ojo! estas borrando');
 }
 //deleteExperiencia(id: any){
 //  this.experienciaservice.deleteExperiencia(id).subscribe()

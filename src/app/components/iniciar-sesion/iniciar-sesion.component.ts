@@ -30,7 +30,7 @@ export class IniciarSesionComponent implements OnInit {
     //alert(this.Email?.value);
     if((this.Email?.value == "admin@portfolio.com") && (this.Password?.value=="12345678"))
     {  
-      alert('Entro');
+      alert('Bienvenido');
       this.router.navigate(['portfolio']);
 
     }else
