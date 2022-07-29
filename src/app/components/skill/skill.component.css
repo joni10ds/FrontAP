@@ -87,3 +87,6 @@
     margin-bottom: 35px;
     width: 100%;
  }
+ .lista li {
+    list-style-type: none;
+   }

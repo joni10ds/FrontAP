@@ -3,7 +3,7 @@
 <div class="lista">
 <h3>
   <li *ngFor="let experiencia of experiencias">
-    <button (click)="DeleteExperiencia()" class="edit">
+    <button (click)="DeleteExperiencia(experiencia.id)" class="edit">
       <img src="../../../assets/images/delete.png" height="30" width="40">
     </button>
     <button class="edit" (click)="EditExperiencia()">
@@ -11,31 +11,38 @@
   </button>
 
     <br>    
-Empresa :&nbsp;{{experiencia.empresa}}<br>Cargo/Puesto :&nbsp;{{experiencia.puesto}}<br>
+Empresa :&nbsp;{{experiencia.empresa}}<br>
+Cargo/Puesto :&nbsp;{{experiencia.puesto}}<br>
 Fecha de Ingreso :&nbsp;{{experiencia.fechaingreso}}&nbsp; <br>
 Fecha de Salida :&nbsp;{{experiencia.fechasalida}}&nbsp; <br>
 Detalle :&nbsp;{{experiencia.detalle}}
-</li></h3>
+  </li>
+</h3>
 <br><br>
 
   <div id="modal-formulario" class="modal-fullscreen-sm-down">
   
-    <div class="modal-header">
-      <h5 class="modal-title ">Ingresar Datos</h5>
-      <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+      <div class="modal-header">
+        <h5 class="modal-title ">Ingresar Datos</h5>
+        <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="empresa">Empresa:</label>
+          <input type="text" id="empresa" [(ngModel)]="empresa" name="empresa" required><br>
+          <label for="puesto">Puesto:</label>
+          <input type="text" id="puesto" [(ngModel)]="puesto" name="puesto" required><br>
+          <label for="fechaingreso">Fecha de ingreso:</label>
+          <input type="text" id="fechaingreso" [(ngModel)]="fechaingreso" name="fechaingreso" required><br>
+          <label for="fechasalida">Fecha de salida:</label>
+          <input type="text" id="fechasalida" [(ngModel)]="fechasalida" name="fechasalida" required><br>
+          <label for="detalle">Detalle:</label>
+          <input type="text" id="detalle" [(ngModel)]="detalle" name="detalle" required>
+        </form>
     </div>
-    <div class="modal-body">
-      <form>
-          <label>Empresa:</label><input/><br>
-          <label>Puesto:</label><input/><br>
-          <label>Fecha de ingreso:</label><input/><br>
-          <label>Fecha de salida:</label><input/><br>
-          <label>Detalle:</label><input/>
-      </form>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" (click)="Experiencia()"  id="enviarButton">Enviar</button>
+      <button class="btn btn-primary" type="button" id="cancelarButton" (click)="cerrarModal()">Cancelar</button>
+    </div>
   </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary" type="button" id="enviarButton">Enviar</button>
-    <button class="btn btn-primary" type="button" id="cancelarButton" (click)="cerrarModal()">Cancelar</button>
-</div>
-    </div>
 

@@ -10,8 +10,10 @@ export class EducacionService {
 
   constructor(private http: HttpClient) { 
     this.urlsApi = {
-      //cuando levantamos la base online cambiar la url http://localhost:8080/ por la url de la base
       geteducacionEndpoint: 'https://argprog2022.herokuapp.com/ver/educaciones',
+      neweducacionEndpoint: 'https://argprog2022.herokuapp.com/new/educacion',
+      deleteeducacionEndpoint: 'https://argprog2022.herokuapp.com/delete/educacion/',
+      editareducacionEndpoint: 'https://argprog2022.herokuapp.com/editar/educacion/', 
       
     }
 
@@ -21,7 +23,18 @@ export class EducacionService {
     return this.http.get(this.urlsApi.geteducacionEndpoint)
   }
 
+  public newEducacion(body: any) {
+    return this.http.post(this.urlsApi.neweducacionEndpoint, body)
+  }
   
+  
+  public deleteEducacion(id: number): Observable<any> {
+    return this.http.delete<any>(this.urlsApi.deleteeducacionEndpoint+`${id}`)
+  }
+  
+  public editarEducacion(id: number, body: any) {
+    return this.http.put(this.urlsApi.editareducacionEndpoint+`${id}`, id, body)
+  }
 }
 
 

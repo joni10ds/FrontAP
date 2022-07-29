@@ -7,7 +7,7 @@ import { IdiomaService } from 'src/app/service/idioma.service';
   styleUrls: ['./idiomas.component.css']
 })
 export class IdiomasComponent implements OnInit {
-  idiomas: any = {};
+  idiomas: any = [];
 
   constructor(private idiomaservice : IdiomaService) { }
 

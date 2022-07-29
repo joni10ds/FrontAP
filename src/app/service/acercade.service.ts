@@ -10,8 +10,10 @@ export class AcercadeService {
 
   constructor(private http: HttpClient) { 
     this.urlsApi = {
-      //cuando levantamos la base online cambiar la url http://localhost:8080/ por la url de la base
       getacercadeEndpoint: 'https://argprog2022.herokuapp.com/ver/personas',
+      newpersonaEndpoint: 'https://argprog2022.herokuapp.com/new/persona',
+      deletepersonaEndpoint: 'https://argprog2022.herokuapp.com/delete/persona/',
+      editarpersonaEndpoint: 'https://argprog2022.herokuapp.com/editar/persona/',
       
     }
 
@@ -21,5 +23,16 @@ export class AcercadeService {
     return this.http.get(this.urlsApi.getacercadeEndpoint)
   }
   
-
+  public newPersona(body: any) {
+    return this.http.post(this.urlsApi.newpersonaEndpoint, body)
+  }
+  
+  
+  public deletePersona(id: number): Observable<any> {
+    return this.http.delete<any>(this.urlsApi.deletepersonaEndpoint+`${id}`)
+  }
+  
+  public editarPersona(id: number, body: any) {
+    return this.http.put(this.urlsApi.editarpersonaEndpoint+`${id}`, id, body)
+  }
 }

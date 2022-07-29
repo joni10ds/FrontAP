@@ -1,5 +1,47 @@
-<h3>Educación</h3><br>
+<h3 class="titulo">Educación</h3> <button class="btn btn-primary" type="button" (click)="NewEducacion()" id="educacionButton">Nueva Educación</button><br><br> <br>
+
 <div class="lista">
-<h3><li *ngFor="let educacion of educaciones">Carrera :&nbsp;{{educacion.carrera}}<br>Tipo :&nbsp;{{educacion.tipo}}&nbsp;<br>Establecimiento :&nbsp;{{educacion.establecimiento}}<br>Fecha de Inicio :&nbsp;{{educacion.fechainicio}}<br>Fecha de Finalización :&nbsp;{{educacion.fechafin}}<br><br></h3>
-<br>
-</div>
+<h3>
+    <li *ngFor="let educacion of educaciones">
+    <button (click)="DeleteEducacion(educacion.id)" class="edit">
+      <img src="../../../assets/images/delete.png" height="30" width="40">
+    </button>
+    <button class="edit" (click)="EditEducacion()">
+    <img src="../../../assets/images/edit2.png" height="30" width="40">
+  </button>
+
+    <br>   
+    Carrera :&nbsp;{{educacion.carrera}}<br>
+    Tipo :&nbsp;{{educacion.tipo}}&nbsp;<br>
+    Establecimiento :&nbsp;{{educacion.establecimiento}}<br>
+    Fecha de Inicio :&nbsp;{{educacion.fechainicio}}<br>
+    Fecha de Finalización :&nbsp;{{educacion.fechafin}}<br><br>
+    </li>
+</h3>
+<br><br>
+
+  <div id="modal-formulario2" class="modal-fullscreen-sm-down">
+  
+      <div class="modal-header">
+        <h5 class="modal-title ">Ingresar Datos</h5>
+        <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="carrera">Carrera:</label>
+          <input type="text" id="carrera" [(ngModel)]="carrera" name="carrera" required><br>
+          <label for="tipo">Tipo:</label>
+          <input type="text" id="tipo" [(ngModel)]="tipo" name="tipo" required><br>
+          <label for="establecimiento">Establecimiento:</label>
+          <input type="text" id="establecimiento" [(ngModel)]="establecimiento" name="establecimiento" required><br>
+          <label for="fechainicio">Fecha de inicio:</label>
+          <input type="text" id="fechainicio" [(ngModel)]="fechainicio" name="fechainicio" required><br>
+          <label for="fechafin">Fecha de finalización:</label>
+          <input type="text" id="fechafin" [(ngModel)]="fechafin" name="fechafin" required>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" (click)="Educacion()"  id="enviarButton">Enviar</button>
+      <button class="btn btn-primary" type="button" id="cancelarButton" (click)="cerrarModal()">Cancelar</button>
+    </div>
+  </div>

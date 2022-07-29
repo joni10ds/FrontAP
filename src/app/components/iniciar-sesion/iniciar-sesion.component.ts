@@ -27,7 +27,6 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   Login(){
-    //alert(this.Email?.value);
     if((this.Email?.value == "admin@portfolio.com") && (this.Password?.value=="12345678"))
     {  
       alert('Bienvenido');

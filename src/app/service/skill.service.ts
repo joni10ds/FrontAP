@@ -10,8 +10,10 @@ export class SkillService {
 
   constructor(private http: HttpClient) { 
     this.urlsApi = {
-      //cuando levantamos la base online cambiar la url http://localhost:8080/ por la url de la base
       getskillEndpoint: 'https://argprog2022.herokuapp.com/ver/skills',
+      newskillEndpoint: 'https://argprog2022.herokuapp.com/new/skill',
+      deleteskillEndpoint: 'https://argprog2022.herokuapp.com/delete/skill/',
+      editarskillEndpoint: 'https://argprog2022.herokuapp.com/editar/skill/', 
       
     }
   
@@ -21,5 +23,17 @@ export class SkillService {
     return this.http.get(this.urlsApi.getskillEndpoint)
   }
   
+  public newSkill(body: any) {
+    return this.http.post(this.urlsApi.newskillEndpoint, body)
+  }
   
+  
+  public deleteSkill(id: number): Observable<any> {
+    return this.http.delete<any>(this.urlsApi.deleteskillEndpoint+`${id}`)
+  }
+  
+  public editarSkill(id: number, body: any) {
+    return this.http.put(this.urlsApi.editarskillEndpoint+`${id}`, id, body)
+  }
+
   }
